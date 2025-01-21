@@ -1,0 +1,247 @@
+/* config general */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #f4f4f4;
+    padding: 1rem 2rem;
+}
+
+.header-container{
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.logo {
+    width: 330px;
+    height: 400px;
+    animation: float 3s ease-in-out infinite;
+}
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.contact-link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    color: #000;
+    background-color: #f2f2f2;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+a{
+    text-decoration: none;   
+    color: black; 
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contact-link:hover {
+    background-color: #ccc;
+}
+
+body {
+    position: relative;
+}
+
+footer {
+    position: relative;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Bodoni Moda";
+    font-style: italic;
+    font-size:90px;
+}
+
+/* Catálogo */
+.catalog {
+    padding: 2rem;
+    text-align: center;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product-name {
+    margin: 0.5rem 0;
+}
+
+.view-more {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.view-more:hover {
+    text-decoration: underline;
+}
+
+/* pie de página */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.footer-text p {
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.social-links a {
+    padding: 5px;
+    color: #007bff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para la vista de escritorio */
+.catalog {
+    padding: 20px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+.product {
+    width: 30%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.view-more {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-more:hover {
+    background-color: #0056b3;
+}
+
+/* variación de tamaños para la vista mobile */
+@media (max-width: 768px) {
+    .contact-link {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    .catalog {
+        padding: 10px;
+    }
+
+    .products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .product-name {
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+
+    .view-more {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    footer {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    /* reducción de logo y texto header */
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        width: 50%; /* disminución del logo */
+    }
+}
+
+/* Estilos para pantallas más peques */
+@media (max-width: 480px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+
+    .product-name {
+        font-size: 0.9rem;
+    }
+
+    .view-more {
+        padding: 6px;
+        font-size: 0.8rem;
+    }
+
+    /* mas reducción */
+    header h1 {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        width: 40%; /* disminución del logo */
+    }
+}
